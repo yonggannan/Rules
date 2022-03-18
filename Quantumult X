@@ -97,6 +97,7 @@ ip-cidr, 183.240.197.130/32, direct
 final, 黑白名单
 
 [rewrite_local]
+^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js
 
 [task_local]
 event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=arrowtriangle.right.square.system, enabled=true
@@ -106,3 +107,5 @@ https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, host=b
 
 [mitm]
 skip_validating_cert = true
+hostname = vip1.kuwo.cn
+
